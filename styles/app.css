@@ -63,6 +63,7 @@ a:active {
 #content .webicon {
 	margin: 0;
 	overflow: hidden;
+	text-decoration: none;
 	text-indent: 0;
 }
 
