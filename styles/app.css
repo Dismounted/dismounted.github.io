@@ -1,0 +1,97 @@
+html,
+body {
+	height: 100%;
+}
+
+body {
+	background-image: url('../backgrounds/1.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+	color: #f8f9e9;
+	font-size: 100%;
+}
+
+h1 {
+	font-size: 3em;
+	font-family: 'Pacifico', cursive;
+	/*text-shadow: 3px 3px 0 rgba(0,0,0,0.5);*/
+}
+
+p {
+	font-family: 'Raleway', sans-serif;
+	line-height: 1.5em;
+	/*text-shadow: 1px 1px 0.05em rgba(0,0,0,0.5);*/
+}
+
+a {
+	color: #00bfff;
+}
+
+a:hover {
+	color: inherit;
+}
+
+a:active {
+	text-decoration: none;
+}
+
+.wrapper {
+	height: 100%;
+	text-align: right;
+}
+
+.wrapper:before {
+	display: inline-block;
+	content: '';
+	height: 100%;
+	vertical-align: middle;
+}
+
+#content {
+	background-color: rgba(0,0,0,0.5);
+	border-radius: 20px;
+	display: inline-block;
+	margin: 4em;
+	padding: 0 1.2em;
+	text-align: left;
+	vertical-align: middle;
+	width: 500px;	
+}
+
+#content .webicon {
+	margin: 0;
+	overflow: hidden;
+	text-indent: 0;
+}
+
+#content .webicon:hover {
+	box-shadow: 0 3px 0 rgba(0, 0, 0, 0.5);
+	margin: 0;
+	position: relative;
+	top: -2px;
+}
+
+#content .webicon span {
+	visibility: hidden;
+}
+
+.js body {
+	background-image: none;
+}
+
+.js .wrapper {
+	display: none;
+}
+
+.null {
+	display: none;
+}
+
+@media all and (max-width: 800px) {
+	.wrapper {
+		height: 0;
+		text-align: center;
+	}
+}
