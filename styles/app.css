@@ -15,12 +15,12 @@ body {
 
 h1 {
 	font-size: 3em;
-	font-family: 'Pacifico', cursive;
+	font-family: 'Julius Sans One', sans-serif;
 	/*text-shadow: 3px 3px 0 rgba(0,0,0,0.5);*/
 }
 
 p {
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Crimson Text', serif;
 	line-height: 1.5em;
 	/*text-shadow: 1px 1px 0.05em rgba(0,0,0,0.5);*/
 }
