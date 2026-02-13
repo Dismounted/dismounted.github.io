@@ -27,29 +27,34 @@ A modern, minimalist personal portfolio built with vanilla JavaScript, Vite, and
 .
 ├── src/
 │   ├── index.html          # Main HTML file
+│   ├── 404.html            # Custom 404 page
 │   ├── styles/
 │   │   ├── main.css        # Core styles and typography
 │   │   ├── themes.css      # Light/dark theme variables
 │   │   ├── glass.css       # Glass morphism effects
-│   │   └── animations.css  # Animation definitions
+│   │   ├── animations.css  # Animation definitions
+│   │   └── 404.css         # 404 page specific styles
 │   ├── scripts/
 │   │   ├── main.js         # Entry point
 │   │   ├── theme.js        # Dark mode toggle
 │   │   ├── email.js        # Email reveal functionality
 │   │   └── analytics.js    # GA4 with consent
 │   └── assets/
-│       └── fonts/          # Self-hosted fonts
+│       └── fonts/          # Self-hosted Outfit variable font
 ├── public/                 # Static assets (copied to dist/)
-│   ├── CNAME              # Custom domain
 │   ├── robots.txt         # Search engine directives
+│   ├── sitemap.xml        # XML sitemap
 │   ├── manifest.json      # PWA manifest
 │   └── favicon.svg        # Favicon
 ├── .github/
 │   └── workflows/
-│       └── deploy.yml     # CI/CD pipeline
-├── vite.config.js         # Vite configuration
-├── lighthouserc.js        # Lighthouse CI config
-└── package.json
+│       ├── deploy.yml     # Deployment pipeline (test + deploy jobs)
+│       └── test.yml       # PR testing workflow
+├── CNAME                   # Custom domain configuration
+├── vite.config.js          # Vite configuration (multi-page setup)
+├── lighthouserc.cjs        # Lighthouse CI config
+├── .stylelintrc.json       # CSS linting rules
+└── package.json            # Dependencies and scripts
 ```
 
 ## Development
