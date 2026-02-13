@@ -10,10 +10,11 @@
     0 8px 32px rgb(0 0 0 / 10%),
     0 2px 8px rgb(0 0 0 / 5%);
   padding: 3rem;
+  padding-top: calc(90px + 2rem); /* Space for half headshot + margin */
   max-width: 600px;
   width: 100%;
   position: relative;
-  overflow: hidden;
+  overflow: visible; /* Allow headshot to overflow */
 }
 
 /* Fallback for browsers without backdrop-filter support */
@@ -27,6 +28,7 @@
 @media (width <= 640px) {
   .glass-panel {
     padding: 2rem;
+    padding-top: calc(75px + 2rem);
     border-radius: 16px;
     margin: 1rem;
   }
@@ -35,5 +37,15 @@
 @media (width <= 420px) {
   .glass-panel {
     padding: 1.5rem;
+    padding-top: calc(75px + 1.5rem);
+  }
+}
+
+/* Landscape/short viewport: adjust for reduced headshot overlap */
+@media (max-height: 900px) {
+  .glass-panel {
+    padding: 1.5rem;
+    padding-top: calc(40px + 3.5rem); /* Extra space between headshot and name */
+    margin: 0.5rem;
   }
 }
