@@ -92,7 +92,7 @@ body {
     0 12px 24px rgb(0 0 0 / 15%);
 }
 
-@media (max-width: 640px) {
+@media (width <= 640px) {
   .headshot {
     width: 150px;
     height: 150px;
@@ -101,7 +101,7 @@ body {
 }
 
 /* Landscape/short viewport: reduce overlap to prevent cropping */
-@media (max-height: 900px) {
+@media (height <= 900px) {
   .headshot {
     width: 120px;
     height: 120px;

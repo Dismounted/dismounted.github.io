@@ -42,7 +42,7 @@
 }
 
 /* Landscape/short viewport: adjust for reduced headshot overlap */
-@media (max-height: 900px) {
+@media (height <= 900px) {
   .glass-panel {
     padding: 1.5rem;
     padding-top: calc(40px + 3.5rem); /* Extra space between headshot and name */
