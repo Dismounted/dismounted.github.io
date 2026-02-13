@@ -8,7 +8,7 @@ A modern, minimalist personal portfolio built with vanilla JavaScript, Vite, and
 - 👤 **Professional headshot** with overlapping glass panel effect
 - 🌓 **Dark mode support** with automatic system preference detection and manual toggle
 - ♿ **WCAG AA accessible** with proper semantic HTML and keyboard navigation
-- 🚀 **Performance optimized** - <25KB total bundle (gzipped)
+- 🚀 **Performance optimized** - ~36KB total initial load (gzipped)
 - 📱 **Fully responsive** - mobile-first design with optimized layouts for all viewports
 - 🔒 **Privacy-focused** - Google Analytics with consent management
 - ⚡ **Modern build stack** - Vite for fast development and optimized production builds
