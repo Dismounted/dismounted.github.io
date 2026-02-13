@@ -45,6 +45,18 @@ npm run test:lighthouse  # Lighthouse CI audit (requires build first)
 - **Accessibility:** WCAG AA compliance enforced by Lighthouse. 44px minimum touch targets, `prefers-reduced-motion` respected, `focus-visible` outlines, semantic HTML.
 - **Stylelint:** Extends `stylelint-config-standard`, allows vendor prefixes.
 
+## Dependency Management
+
+**Always use the latest package versions.** When adding or updating dependencies, check for the most recent stable releases. This project does not tolerate outdated packages — keeping dependencies current is essential for security, performance, and compatibility.
+
+```bash
+npm outdated              # Check for outdated packages
+npm update                # Update to latest within semver range
+npm install pkg@latest    # Install specific package at latest version
+```
+
+After updating packages, always run `npm test` to ensure everything still works.
+
 ## CI/CD
 
 - **PRs:** `.github/workflows/test.yml` runs CSS lint → build → HTML validation → Lighthouse
