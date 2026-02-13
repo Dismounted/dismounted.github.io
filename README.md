@@ -5,21 +5,23 @@ A modern, minimalist personal portfolio built with vanilla JavaScript, Vite, and
 ## Features
 
 - 🎨 **Glass morphism design** with animated gradient background
+- 👤 **Professional headshot** with overlapping glass panel effect
 - 🌓 **Dark mode support** with automatic system preference detection and manual toggle
 - ♿ **WCAG AA accessible** with proper semantic HTML and keyboard navigation
-- 🚀 **Performance optimized** - <20KB total bundle (gzipped)
-- 📱 **Fully responsive** - mobile-first design
+- 🚀 **Performance optimized** - <25KB total bundle (gzipped)
+- 📱 **Fully responsive** - mobile-first design with optimized layouts for all viewports
 - 🔒 **Privacy-focused** - Google Analytics with consent management
 - ⚡ **Modern build stack** - Vite for fast development and optimized production builds
 
 ## Tech Stack
 
 - **Framework**: Vanilla JavaScript (ES6+ modules)
-- **Build Tool**: Vite 5
+- **Build Tool**: Vite 7
 - **Fonts**: Outfit variable font (self-hosted)
 - **Icons**: Inline SVG (Lucide design)
 - **Deployment**: GitHub Actions → GitHub Pages
 - **Analytics**: Google Analytics 4 with consent banner
+- **Testing**: Lighthouse CI, Stylelint, html-validate
 
 ## Project Structure
 
@@ -40,7 +42,8 @@ A modern, minimalist personal portfolio built with vanilla JavaScript, Vite, and
 │   │   ├── email.js        # Email reveal functionality
 │   │   └── analytics.js    # GA4 with consent
 │   └── assets/
-│       └── fonts/          # Self-hosted Outfit variable font
+│       ├── fonts/          # Self-hosted Outfit variable font
+│       └── headshot.jpg    # Optimized profile photo
 ├── public/                 # Static assets (copied to dist/)
 │   ├── robots.txt         # Search engine directives
 │   ├── sitemap.xml        # XML sitemap
@@ -85,8 +88,10 @@ npm run preview
 - `npm run dev` - Start Vite dev server with HMR
 - `npm run build` - Build optimized production bundle
 - `npm run preview` - Preview production build locally
-- `npm test` - Run Lighthouse CI tests
-- `npm run test:html` - Validate HTML
+- `npm test` - Run all tests (CSS lint, HTML validation, Lighthouse)
+- `npm run test:css` - Run CSS linting with Stylelint
+- `npm run test:html` - Validate HTML structure
+- `npm run test:lighthouse` - Run Lighthouse CI performance audit
 
 ## Deployment
 
@@ -94,24 +99,33 @@ The site automatically deploys to GitHub Pages when changes are pushed to the `m
 
 ### GitHub Actions Workflow
 
-1. **Build**: Install dependencies, build with Vite
-2. **Test**: Run Lighthouse CI (90+ scores required)
-3. **Deploy**: Upload to GitHub Pages
+The deployment pipeline runs in two jobs:
+
+1. **Test Job**:
+   - CSS linting with Stylelint
+   - Build with Vite
+   - HTML validation
+   - Lighthouse CI (90+ scores required in all categories)
+
+2. **Deploy Job** (runs only if tests pass):
+   - Upload build artifact
+   - Deploy to GitHub Pages
 
 ### Custom Domain
 
-The site is deployed to [www.hansonwong.com.au](https://www.hansonwong.com.au) via the `CNAME` file in the `public/` directory.
+The site is deployed to [www.hansonwong.com.au](https://www.hansonwong.com.au) via the `CNAME` file in the repository root.
 
 ## Performance
 
 Current bundle sizes (gzipped):
 
-- HTML: ~2.4 KB
-- CSS: ~2.1 KB
-- JavaScript: ~1.3 KB
+- HTML: ~2.5 KB
+- CSS: ~2.3 KB
+- JavaScript: ~1.4 KB
 - Font (WOFF2): ~14 KB
+- Headshot image: ~15.7 KB
 
-**Total initial load: ~19.8 KB**
+**Total initial load: ~36 KB** (optimized for performance)
 
 Lighthouse scores (target 90+):
 - Performance: 90+
