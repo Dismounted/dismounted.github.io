@@ -2,6 +2,7 @@ module.exports = {
   ci: {
     collect: {
       staticDistDir: './dist',
+      url: ['http://localhost/index.html'],
     },
     assert: {
       assertions: {
