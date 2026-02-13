@@ -3,6 +3,18 @@
  * Handles dark mode toggle with localStorage persistence
  */
 
+/**
+ * Update theme-color meta tag for iOS Safari UI
+ */
+function updateThemeColor(theme) {
+  const themeColor = theme === 'dark' ? '#0f172a' : '#e0f2fe';
+  let metaThemeColor = document.querySelector('meta[name="theme-color"]');
+
+  if (metaThemeColor) {
+    metaThemeColor.setAttribute('content', themeColor);
+  }
+}
+
 export function initTheme() {
   const themeToggle = document.getElementById('theme-toggle');
 
@@ -18,6 +30,9 @@ export function initTheme() {
 
     document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
+
+    // Update theme-color meta tag for iOS Safari
+    updateThemeColor(newTheme);
 
     // Update ARIA label
     themeToggle.setAttribute(
@@ -39,10 +54,13 @@ export function initTheme() {
     }
   });
 
-  // Set initial ARIA label
+  // Set initial ARIA label and theme color
   const currentTheme = document.documentElement.getAttribute('data-theme');
   themeToggle.setAttribute(
     'aria-label',
     `Switch to ${currentTheme === 'light' ? 'dark' : 'light'} mode`
   );
+
+  // Set initial theme-color meta tag
+  updateThemeColor(currentTheme);
 }
