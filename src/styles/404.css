@@ -41,3 +41,45 @@
   outline: 2px solid var(--focus-ring);
   outline-offset: 4px;
 }
+
+/* Reset glass panel padding to be equal (no headshot on 404) */
+.error-panel {
+  padding: 3rem !important;
+}
+
+/* Override body spacing adjustments from main page */
+body {
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Override mobile spacing */
+@media (width <= 640px) {
+  body {
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .error-panel {
+    padding: 2rem !important;
+  }
+}
+
+/* Override small mobile spacing */
+@media (width <= 420px) {
+  .error-panel {
+    padding: 1.5rem !important;
+  }
+}
+
+/* Override landscape spacing */
+@media (height <= 900px) {
+  body {
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .error-panel {
+    padding: 1.5rem !important;
+  }
+}
