@@ -1,0 +1,63 @@
+/* Theme Variables */
+
+:root {
+  /* Light Theme - Blue/Purple Spectrum */
+  --gradient-1: #e0f2fe; /* Light blue */
+  --gradient-2: #bae6fd; /* Sky blue */
+  --gradient-3: #e9d5ff; /* Light purple */
+  --gradient-4: #f3e8ff; /* Pale purple */
+  --glass-background: rgb(255 255 255 / 70%);
+  --glass-border: rgb(255 255 255 / 30%);
+  --glass-fallback-background: rgb(255 255 255 / 95%);
+  --text-primary: #1e293b; /* Dark slate */
+  --text-secondary: #475569; /* Medium slate */
+  --accent: #06f; /* Bright blue */
+  --accent-hover: #0052cc; /* Darker blue */
+  --focus-ring: #06f;
+  --focus-ring-offset: #fff;
+  --consent-bg: rgb(255 255 255 / 95%);
+  --consent-border: rgb(0 0 0 / 10%);
+  --button-bg: #06f;
+  --button-hover: #0052cc;
+  --button-secondary: #e2e8f0;
+  --button-secondary-hover: #cbd5e1;
+  --button-text: #fff;
+  --button-text-secondary: #1e293b;
+}
+
+[data-theme="dark"] {
+  /* Dark Theme - Deep Blue/Purple Spectrum */
+  --gradient-1: #0f172a; /* Deep slate */
+  --gradient-2: #1e1b4b; /* Deep indigo */
+  --gradient-3: #581c87; /* Deep purple */
+  --gradient-4: #4c1d95; /* Deep violet */
+  --glass-background: rgb(15 23 42 / 50%);
+  --glass-border: rgb(255 255 255 / 10%);
+  --glass-fallback-background: rgb(15 23 42 / 95%);
+  --text-primary: #f1f5f9; /* Light slate */
+  --text-secondary: #cbd5e1; /* Medium light slate */
+  --accent: #60a5fa; /* Light blue */
+  --accent-hover: #93c5fd; /* Lighter blue */
+  --focus-ring: #60a5fa;
+  --focus-ring-offset: #1e293b;
+  --consent-bg: rgb(15 23 42 / 95%);
+  --consent-border: rgb(255 255 255 / 10%);
+  --button-bg: #60a5fa;
+  --button-hover: #93c5fd;
+  --button-secondary: #334155;
+  --button-secondary-hover: #475569;
+  --button-text: #0f172a;
+  --button-text-secondary: #f1f5f9;
+}
+
+/* Smooth theme transitions */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.01ms !important;
+  }
+}

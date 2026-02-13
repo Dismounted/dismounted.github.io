@@ -1,0 +1,39 @@
+/* Glass Morphism Effects */
+
+.glass-panel {
+  background: var(--glass-background);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+  border-radius: 24px;
+  border: 1px solid var(--glass-border);
+  box-shadow:
+    0 8px 32px rgb(0 0 0 / 10%),
+    0 2px 8px rgb(0 0 0 / 5%);
+  padding: 3rem;
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Fallback for browsers without backdrop-filter support */
+@supports not (backdrop-filter: blur(12px)) {
+  .glass-panel {
+    background: var(--glass-fallback-background);
+  }
+}
+
+/* Responsive adjustments for mobile */
+@media (width <= 640px) {
+  .glass-panel {
+    padding: 2rem;
+    border-radius: 16px;
+    margin: 1rem;
+  }
+}
+
+@media (width <= 420px) {
+  .glass-panel {
+    padding: 1.5rem;
+  }
+}

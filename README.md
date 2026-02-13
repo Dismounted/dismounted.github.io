@@ -1,4 +1,146 @@
-dismounted.github.io
-====================
+# Hanson Wong - Personal Portfolio
 
-Nothing much to see here, fellas!
+A modern, minimalist personal portfolio built with vanilla JavaScript, Vite, and contemporary web technologies.
+
+## Features
+
+- 🎨 **Glass morphism design** with animated gradient background
+- 🌓 **Dark mode support** with automatic system preference detection and manual toggle
+- ♿ **WCAG AA accessible** with proper semantic HTML and keyboard navigation
+- 🚀 **Performance optimized** - <20KB total bundle (gzipped)
+- 📱 **Fully responsive** - mobile-first design
+- 🔒 **Privacy-focused** - Google Analytics with consent management
+- ⚡ **Modern build stack** - Vite for fast development and optimized production builds
+
+## Tech Stack
+
+- **Framework**: Vanilla JavaScript (ES6+ modules)
+- **Build Tool**: Vite 5
+- **Fonts**: Outfit variable font (self-hosted)
+- **Icons**: Inline SVG (Lucide design)
+- **Deployment**: GitHub Actions → GitHub Pages
+- **Analytics**: Google Analytics 4 with consent banner
+
+## Project Structure
+
+```
+.
+├── src/
+│   ├── index.html          # Main HTML file
+│   ├── styles/
+│   │   ├── main.css        # Core styles and typography
+│   │   ├── themes.css      # Light/dark theme variables
+│   │   ├── glass.css       # Glass morphism effects
+│   │   └── animations.css  # Animation definitions
+│   ├── scripts/
+│   │   ├── main.js         # Entry point
+│   │   ├── theme.js        # Dark mode toggle
+│   │   ├── email.js        # Email reveal functionality
+│   │   └── analytics.js    # GA4 with consent
+│   └── assets/
+│       └── fonts/          # Self-hosted fonts
+├── public/                 # Static assets (copied to dist/)
+│   ├── CNAME              # Custom domain
+│   ├── robots.txt         # Search engine directives
+│   ├── manifest.json      # PWA manifest
+│   └── favicon.svg        # Favicon
+├── .github/
+│   └── workflows/
+│       └── deploy.yml     # CI/CD pipeline
+├── vite.config.js         # Vite configuration
+├── lighthouserc.js        # Lighthouse CI config
+└── package.json
+```
+
+## Development
+
+### Prerequisites
+
+- Node.js 20+
+- npm or yarn
+
+### Setup
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+### Available Scripts
+
+- `npm run dev` - Start Vite dev server with HMR
+- `npm run build` - Build optimized production bundle
+- `npm run preview` - Preview production build locally
+- `npm test` - Run Lighthouse CI tests
+- `npm run test:html` - Validate HTML
+
+## Deployment
+
+The site automatically deploys to GitHub Pages when changes are pushed to the `master` branch.
+
+### GitHub Actions Workflow
+
+1. **Build**: Install dependencies, build with Vite
+2. **Test**: Run Lighthouse CI (90+ scores required)
+3. **Deploy**: Upload to GitHub Pages
+
+### Custom Domain
+
+The site is deployed to [www.hansonwong.com.au](https://www.hansonwong.com.au) via the `CNAME` file in the `public/` directory.
+
+## Performance
+
+Current bundle sizes (gzipped):
+
+- HTML: ~2.4 KB
+- CSS: ~2.1 KB
+- JavaScript: ~1.3 KB
+- Font (WOFF2): ~14 KB
+
+**Total initial load: ~19.8 KB**
+
+Lighthouse scores (target 90+):
+- Performance: 90+
+- Accessibility: 90+
+- Best Practices: 90+
+- SEO: 90+
+
+## Browser Support
+
+Modern browsers only (last 2 versions):
+- Chrome/Edge 90+
+- Firefox 88+
+- Safari 14+
+
+## Accessibility
+
+- WCAG AA compliant color contrast (4.5:1 for normal text)
+- Semantic HTML with proper heading hierarchy
+- Keyboard navigation support
+- Screen reader friendly
+- Respects `prefers-reduced-motion`
+- Respects `prefers-color-scheme`
+
+## Privacy
+
+Google Analytics 4 is loaded only with explicit user consent via a cookie banner. Users can accept or decline tracking. The choice is stored in localStorage.
+
+## License
+
+See [LICENSE](LICENSE) file.
+
+## Contact
+
+- Website: [www.hansonwong.com.au](https://www.hansonwong.com.au)
+- LinkedIn: [wonghanson](https://www.linkedin.com/in/wonghanson/)
+- GitHub: [@Dismounted](https://github.com/Dismounted)
+- Mastodon: [@hanson@mastodon.social](https://mastodon.social/@hanson)

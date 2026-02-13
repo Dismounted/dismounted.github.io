@@ -7,3 +7,25 @@
 Icon?
 ehthumbs.db
 Thumbs.db
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment variables
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temporary files
+.cache/
+.temp/

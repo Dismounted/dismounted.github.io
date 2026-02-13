@@ -1,0 +1,23 @@
+{
+  "name": "hanson-wong-portfolio",
+  "version": "2.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "npm run test:css && npm run test:html && npm run test:lighthouse",
+    "test:css": "stylelint 'src/**/*.css'",
+    "test:lighthouse": "lhci autorun",
+    "test:html": "html-validate dist/**/*.html"
+  },
+  "devDependencies": {
+    "@lhci/cli": "^0.15.1",
+    "html-validate": "^10.7.0",
+    "stylelint": "^17.2.0",
+    "stylelint-config-standard": "^40.0.0",
+    "terser": "^5.46.0",
+    "vite": "^7.3.1"
+  }
+}

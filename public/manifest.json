@@ -1,0 +1,17 @@
+{
+  "name": "Hanson Wong",
+  "short_name": "Hanson Wong",
+  "description": "BCG Project Leader advising top investors and tech companies on strategy, corporate development, and M&A.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#e0f2fe",
+  "theme_color": "#0066ff",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
