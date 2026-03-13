@@ -11,13 +11,10 @@ export default defineConfig({
     assetsDir: 'assets',
     sourcemap: false,
     minify: 'terser',
-    rollupOptions: {
+    rolldownOptions: {
       input: {
         main: resolve(__dirname, 'src/index.html'),
         404: resolve(__dirname, 'src/404.html'),
-      },
-      output: {
-        manualChunks: undefined, // Single bundle for small site
       },
     },
   },

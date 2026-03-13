@@ -16,7 +16,7 @@ A modern, minimalist personal portfolio built with vanilla JavaScript, Vite, and
 ## Tech Stack
 
 - **Framework**: Vanilla JavaScript (ES6+ modules)
-- **Build Tool**: Vite 7
+- **Build Tool**: Vite 8
 - **Fonts**: Outfit variable font (self-hosted)
 - **Icons**: Inline SVG (Lucide design)
 - **Deployment**: GitHub Actions → GitHub Pages
@@ -136,9 +136,9 @@ Lighthouse scores (target 90+):
 ## Browser Support
 
 Modern browsers only (last 2 versions):
-- Chrome/Edge 90+
-- Firefox 88+
-- Safari 14+
+- Chrome/Edge 111+
+- Firefox 114+
+- Safari 16.4+
 
 ## Accessibility
 
