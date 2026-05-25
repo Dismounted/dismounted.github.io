@@ -64,7 +64,7 @@ A modern, minimalist personal portfolio built with vanilla JavaScript, Vite, and
 
 ### Prerequisites
 
-- Node.js 20+
+- Node.js 22+
 - npm or yarn
 
 ### Setup
