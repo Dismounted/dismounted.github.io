@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.hansonwong.com.au/sitemap.xml
+Sitemap: https://www.hansonwong.au/sitemap.xml

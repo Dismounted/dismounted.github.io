@@ -19,7 +19,7 @@ A modern, minimalist personal portfolio built with vanilla JavaScript, Vite, and
 - **Build Tool**: Vite 8
 - **Fonts**: Outfit variable font (self-hosted)
 - **Icons**: Inline SVG (Lucide design)
-- **Deployment**: GitHub Actions → GitHub Pages
+- **Deployment**: GitHub Actions → Cloudflare Workers
 - **Testing**: Lighthouse CI, Stylelint, html-validate
 
 ## Project Structure
@@ -51,7 +51,7 @@ A modern, minimalist personal portfolio built with vanilla JavaScript, Vite, and
 │   └── workflows/
 │       ├── deploy.yml     # Deployment pipeline (test + deploy jobs)
 │       └── test.yml       # PR testing workflow
-├── CNAME                   # Custom domain configuration
+├── wrangler.jsonc          # Cloudflare Workers configuration
 ├── vite.config.js          # Vite configuration (multi-page setup)
 ├── lighthouserc.cjs        # Lighthouse CI config
 ├── .stylelintrc.json       # CSS linting rules
@@ -93,7 +93,7 @@ npm run preview
 
 ## Deployment
 
-The site automatically deploys to GitHub Pages when changes are pushed to the `master` branch.
+The site automatically deploys to Cloudflare Workers when changes are pushed to the `master` branch.
 
 ### GitHub Actions Workflow
 
@@ -106,12 +106,12 @@ The deployment pipeline runs in two jobs:
    - Lighthouse CI (90+ scores required in all categories)
 
 2. **Deploy Job** (runs only if tests pass):
-   - Upload build artifact
-   - Deploy to GitHub Pages
+   - Download build artifact
+   - Deploy to Cloudflare Workers via `wrangler-action`
 
 ### Custom Domain
 
-The site is deployed to [www.hansonwong.com.au](https://www.hansonwong.com.au) via the `CNAME` file in the repository root.
+The site is served from [www.hansonwong.au](https://www.hansonwong.au); the custom domain routes are configured in `wrangler.jsonc`.
 
 ## Performance
 
@@ -157,7 +157,7 @@ See [LICENSE](LICENSE) file.
 
 ## Contact
 
-- Website: [www.hansonwong.com.au](https://www.hansonwong.com.au)
+- Website: [www.hansonwong.au](https://www.hansonwong.au)
 - LinkedIn: [wonghanson](https://www.linkedin.com/in/wonghanson/)
 - GitHub: [@Dismounted](https://github.com/Dismounted)
 - Mastodon: [@hanson@mastodon.social](https://mastodon.social/@hanson)

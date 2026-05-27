@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Personal portfolio site for Hanson Wong (www.hansonwong.com.au), built with vanilla JavaScript and Vite. Deployed to GitHub Pages from the `master` branch. The site is performance-obsessed — total initial load is ~36KB gzipped.
+Personal portfolio site for Hanson Wong (www.hansonwong.au), built with vanilla JavaScript and Vite. Deployed to Cloudflare Workers from the `master` branch. The site is performance-obsessed — total initial load is ~36KB gzipped.
 
 ## Commands
 
@@ -59,5 +59,5 @@ After updating packages, always run `npm test` to ensure everything still works.
 ## CI/CD
 
 - **PRs:** `.github/workflows/test.yml` runs CSS lint → build → HTML validation → Lighthouse
-- **Deploy:** `.github/workflows/deploy.yml` on push to master runs all tests then deploys to GitHub Pages
+- **Deploy:** `.github/workflows/deploy.yml` on push to master runs all tests then deploys to Cloudflare Workers (config in `wrangler.jsonc`)
 - **Lighthouse thresholds:** 90+ required for performance, accessibility, best practices, and SEO

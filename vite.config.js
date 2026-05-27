@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 
 export default defineConfig({
-  base: '/', // GitHub Pages serves from root with custom domain
+  base: '/',
   root: 'src',
   publicDir: '../public',
   build: {
