@@ -27,7 +27,6 @@ npm run test:lighthouse  # Lighthouse CI audit (requires build first)
 **JavaScript:** Vanilla ES6 modules. `src/scripts/main.js` is the entry point, importing feature modules that each export an `init*` function:
 - `theme.js` — Dark/light toggle, localStorage persistence, syncs with system preference, updates iOS theme-color meta tag
 - `email.js` — Click-to-reveal email, second click copies to clipboard with toast notification
-- `analytics.js` — GA4 behind explicit consent banner, loads script only on accept
 
 **CSS:** Vanilla CSS with custom properties for theming. Split by concern:
 - `main.css` — Typography, layout, components

@@ -10,7 +10,7 @@ A modern, minimalist personal portfolio built with vanilla JavaScript, Vite, and
 - ♿ **WCAG AA accessible** with proper semantic HTML and keyboard navigation
 - 🚀 **Performance optimized** - ~36KB total initial load (gzipped)
 - 📱 **Fully responsive** - mobile-first design with optimized layouts for all viewports
-- 🔒 **Privacy-focused** - Google Analytics with consent management
+- 🔒 **Privacy-focused** - no analytics, no tracking, no cookies
 - ⚡ **Modern build stack** - Vite for fast development and optimized production builds
 
 ## Tech Stack
@@ -20,7 +20,6 @@ A modern, minimalist personal portfolio built with vanilla JavaScript, Vite, and
 - **Fonts**: Outfit variable font (self-hosted)
 - **Icons**: Inline SVG (Lucide design)
 - **Deployment**: GitHub Actions → GitHub Pages
-- **Analytics**: Google Analytics 4 with consent banner
 - **Testing**: Lighthouse CI, Stylelint, html-validate
 
 ## Project Structure
@@ -39,8 +38,7 @@ A modern, minimalist personal portfolio built with vanilla JavaScript, Vite, and
 │   ├── scripts/
 │   │   ├── main.js         # Entry point
 │   │   ├── theme.js        # Dark mode toggle
-│   │   ├── email.js        # Email reveal functionality
-│   │   └── analytics.js    # GA4 with consent
+│   │   └── email.js        # Email reveal functionality
 │   └── assets/
 │       ├── fonts/          # Self-hosted Outfit variable font
 │       └── headshot.jpg    # Optimized profile photo
@@ -151,7 +149,7 @@ Modern browsers only (last 2 versions):
 
 ## Privacy
 
-Google Analytics 4 is loaded only with explicit user consent via a cookie banner. Users can accept or decline tracking. The choice is stored in localStorage.
+This site does not use analytics, tracking, or cookies.
 
 ## License
 

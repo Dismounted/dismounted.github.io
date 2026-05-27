@@ -16,14 +16,7 @@
   --accent-hover: #0052cc; /* Darker blue */
   --focus-ring: #06f;
   --focus-ring-offset: #fff;
-  --consent-bg: rgb(255 255 255 / 95%);
-  --consent-border: rgb(0 0 0 / 10%);
-  --button-bg: #06f;
-  --button-hover: #0052cc;
-  --button-secondary: #e2e8f0;
-  --button-secondary-hover: #cbd5e1;
   --button-text: #fff;
-  --button-text-secondary: #1e293b;
 }
 
 [data-theme="dark"] {
@@ -42,14 +35,7 @@
   --accent-hover: #93c5fd; /* Lighter blue */
   --focus-ring: #60a5fa;
   --focus-ring-offset: #1e293b;
-  --consent-bg: rgb(15 23 42 / 95%);
-  --consent-border: rgb(255 255 255 / 10%);
-  --button-bg: #60a5fa;
-  --button-hover: #93c5fd;
-  --button-secondary: #334155;
-  --button-secondary-hover: #475569;
   --button-text: #0f172a;
-  --button-text-secondary: #f1f5f9;
 }
 
 /* Smooth theme transitions */
