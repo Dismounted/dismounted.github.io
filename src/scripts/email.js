@@ -5,7 +5,7 @@
 
 export function initEmail() {
   const emailButton = document.getElementById('email-reveal');
-  const email = 'me@hansonwong.com.au';
+  const email = 'me@hansonwong.au';
   let isRevealed = false;
 
   if (!emailButton) {
