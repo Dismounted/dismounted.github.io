@@ -34,6 +34,16 @@
   }
 }
 
+@keyframes email-text-swap {
+  0%, 100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
 /* Apply animations */
 
 .glass-panel {
@@ -66,6 +76,11 @@
 .theme-toggle {
   animation: fade-in 600ms ease-out 300ms;
   animation-fill-mode: both;
+}
+
+/* Email reveal: cross-fade placeholder out, email in */
+#email-reveal span.swapping {
+  animation: email-text-swap 400ms ease;
 }
 
 /* Respect reduced motion preferences */

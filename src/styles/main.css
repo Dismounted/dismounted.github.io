@@ -186,6 +186,50 @@ h1 {
   flex-shrink: 0;
 }
 
+.social-link[data-tooltip] {
+  position: relative;
+}
+
+.social-link[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--glass-background);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  padding: 0.375rem 0.625rem;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
+}
+
+.social-link[data-tooltip]:hover::after,
+.social-link[data-tooltip]:focus-visible::after {
+  opacity: 1;
+}
+
+@starting-style {
+  .social-link[data-tooltip]:hover::after,
+  .social-link[data-tooltip]:focus-visible::after {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .social-link[data-tooltip]::after {
+    transition: none;
+  }
+}
+
 @media (width <= 640px) {
   .social-links {
     flex-direction: column;

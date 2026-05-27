@@ -43,10 +43,27 @@ export function initEmail() {
   // Handle email reveal and copy
   emailButton.addEventListener('click', async () => {
     if (!isRevealed) {
-      // First click: reveal email
-      emailButton.querySelector('span').textContent = email;
-      emailButton.setAttribute('aria-label', 'Copy email address to clipboard');
+      // First click: reveal email with cross-fade
       isRevealed = true;
+      const span = emailButton.querySelector('span');
+      const swapText = () => {
+        span.textContent = email;
+        emailButton.setAttribute('aria-label', 'Copy email address to clipboard');
+        emailButton.setAttribute('data-tooltip', 'Click to copy');
+      };
+
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        swapText();
+      } else {
+        span.classList.add('swapping');
+        // Swap text at the midpoint of the 400ms animation, while opacity is 0
+        setTimeout(swapText, 200);
+        span.addEventListener(
+          'animationend',
+          () => span.classList.remove('swapping'),
+          { once: true }
+        );
+      }
     } else {
       // Subsequent clicks: copy to clipboard
       await copyToClipboard();
