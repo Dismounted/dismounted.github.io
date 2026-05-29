@@ -111,7 +111,7 @@ The deployment pipeline runs in two jobs:
 
 ### Custom Domain
 
-The site is served from [www.hansonwong.au](https://www.hansonwong.au); the custom domain routes are configured in `wrangler.jsonc`.
+The site is served from [hansonwong.au](https://www.hansonwong.au); the custom domain routes are configured in `wrangler.jsonc`.
 
 ## Performance
 
@@ -157,7 +157,7 @@ See [LICENSE](LICENSE) file.
 
 ## Contact
 
-- Website: [www.hansonwong.au](https://www.hansonwong.au)
+- Website: [hansonwong.au](https://www.hansonwong.au)
 - LinkedIn: [wonghanson](https://www.linkedin.com/in/wonghanson/)
 - GitHub: [@Dismounted](https://github.com/Dismounted)
 - Mastodon: [@hanson@mastodon.social](https://mastodon.social/@hanson)
