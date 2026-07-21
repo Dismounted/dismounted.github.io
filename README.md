@@ -8,8 +8,9 @@ A modern, minimalist personal portfolio built with vanilla JavaScript, Vite, and
 - 👤 **Professional headshot** with overlapping glass panel effect
 - 🌓 **Dark mode support** with automatic system preference detection and manual toggle
 - ♿ **WCAG AA accessible** with proper semantic HTML and keyboard navigation
-- 🚀 **Performance optimized** - ~36KB total initial load (gzipped)
+- 🚀 **Performance optimized** - ~35KB total initial load (gzipped)
 - 📱 **Fully responsive** - mobile-first design with optimized layouts for all viewports
+- 🔍 **SEO-ready** - canonical URL, Open Graph & Twitter cards, and JSON-LD `Person` structured data
 - 🔒 **Privacy-focused** - no analytics, no tracking, no cookies
 - ⚡ **Modern build stack** - Vite for fast development and optimized production builds
 
@@ -46,6 +47,7 @@ A modern, minimalist personal portfolio built with vanilla JavaScript, Vite, and
 │   ├── robots.txt         # Search engine directives
 │   ├── sitemap.xml        # XML sitemap
 │   ├── manifest.json      # PWA manifest
+│   ├── og-image.jpg       # Social share / Open Graph image
 │   └── favicon.svg        # Favicon
 ├── .github/
 │   └── workflows/
@@ -62,7 +64,7 @@ A modern, minimalist personal portfolio built with vanilla JavaScript, Vite, and
 
 ### Prerequisites
 
-- Node.js 22+
+- Node.js 22+ (CI builds on the latest LTS via `lts/*`)
 - npm or yarn
 
 ### Setup
@@ -117,13 +119,15 @@ The site is served from [hansonwong.au](https://www.hansonwong.au); the custom d
 
 Current bundle sizes (gzipped):
 
-- HTML: ~2.5 KB
-- CSS: ~2.3 KB
-- JavaScript: ~1.4 KB
-- Font (WOFF2): ~14 KB
-- Headshot image: ~15.7 KB
+- HTML: ~2.6 KB
+- CSS: ~2.1 KB
+- JavaScript: ~1.2 KB
+- Font (WOFF2): ~13.7 KB
+- Headshot image: ~15.3 KB
 
-**Total initial load: ~36 KB** (optimized for performance)
+**Total initial load: ~35 KB** (optimized for performance)
+
+The Open Graph image (`public/og-image.jpg`, ~15 KB) is fetched only by social/crawler scrapers, so it is not part of the page's initial load.
 
 Lighthouse scores (target 90+):
 - Performance: 90+

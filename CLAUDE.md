@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Personal portfolio site for Hanson Wong (www.hansonwong.au), built with vanilla JavaScript and Vite. Deployed to Cloudflare Workers from the `master` branch. The site is performance-obsessed — total initial load is ~36KB gzipped.
+Personal portfolio site for Hanson Wong (www.hansonwong.au), built with vanilla JavaScript and Vite. Deployed to Cloudflare Workers from the `master` branch. The site is performance-obsessed — total initial load is ~35KB gzipped.
 
 ## Commands
 
@@ -35,7 +35,7 @@ npm run test:lighthouse  # Lighthouse CI audit (requires build first)
 - `animations.css` — Keyframe animations
 - `404.css` — 404 page styles
 
-**Static assets:** `public/` directory (robots.txt, sitemap.xml, manifest.json, favicon.svg) copied as-is to `dist/`.
+**Static assets:** `public/` directory (robots.txt, sitemap.xml, manifest.json, favicon.svg, og-image.jpg) copied as-is to `dist/`. `og-image.jpg` is a stable-URL copy of the headshot used for social/structured-data previews (crawler-only, not part of page load).
 
 ## Key Patterns
 
@@ -43,6 +43,7 @@ npm run test:lighthouse  # Lighthouse CI audit (requires build first)
 - **Responsive:** Mobile-first with breakpoints at 640px and 420px. Uses `clamp()` for fluid typography and `100dvh` for viewport height.
 - **Accessibility:** WCAG AA compliance enforced by Lighthouse. 44px minimum touch targets, `prefers-reduced-motion` respected, `focus-visible` outlines, semantic HTML.
 - **Stylelint:** Extends `stylelint-config-standard`, allows vendor prefixes.
+- **SEO:** `index.html` carries a canonical link, Open Graph + Twitter Card meta, and JSON-LD `Person` structured data (social image at `public/og-image.jpg`). Canonical, `og:url`, and `sitemap.xml` all use the trailing-slash origin `https://www.hansonwong.au/` — keep them in sync. `404.html` is `noindex` and must not carry a canonical.
 
 ## Dependency Management
 
