@@ -93,6 +93,23 @@ npm run preview
 - `npm run test:html` - Validate HTML structure
 - `npm run test:lighthouse` - Run Lighthouse CI performance audit
 
+### Updating Dependencies
+
+This project always tracks the latest stable package versions.
+
+```bash
+# Check for outdated packages
+npm outdated
+
+# Update within the current semver range (minor/patch)
+npm update
+
+# Bump a package to its latest major version, saving it to package.json
+npm install pkg@latest --save
+```
+
+Prefer `--save` explicitly when installing or bumping packages so the new version is recorded in `package.json`. After updating, run `npm test` to confirm CSS lint, HTML validation, and Lighthouse still pass.
+
 ## Deployment
 
 The site automatically deploys to Cloudflare Workers when changes are pushed to the `master` branch.
