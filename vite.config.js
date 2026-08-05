@@ -13,8 +13,8 @@ export default defineConfig({
     minify: 'terser',
     rolldownOptions: {
       input: {
-        main: resolve(__dirname, 'src/index.html'),
-        404: resolve(__dirname, 'src/404.html'),
+        main: resolve(import.meta.dirname, 'src/index.html'),
+        404: resolve(import.meta.dirname, 'src/404.html'),
       },
     },
   },
