@@ -50,6 +50,7 @@ A modern, minimalist personal portfolio built with vanilla JavaScript, Vite, and
 │   ├── og-image.jpg       # Social share / Open Graph image
 │   └── favicon.svg        # Favicon
 ├── .github/
+│   ├── dependabot.yml     # Automated dependency updates (npm + Actions)
 │   └── workflows/
 │       ├── deploy.yml     # Deployment pipeline (test + deploy jobs)
 │       └── test.yml       # PR testing workflow
@@ -96,6 +97,10 @@ npm run preview
 ### Updating Dependencies
 
 This project always tracks the latest stable package versions.
+
+Dependabot (`.github/dependabot.yml`) opens update PRs weekly for both npm packages and GitHub Actions used in the workflows. Those PRs run the full test workflow, so a green check means CSS lint, build, HTML validation, and Lighthouse all still pass — review and merge them as they arrive.
+
+Manual updates:
 
 ```bash
 # Check for outdated packages

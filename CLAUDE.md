@@ -49,6 +49,8 @@ npm run test:lighthouse  # Lighthouse CI audit (requires build first)
 
 **Always use the latest package versions.** When adding or updating dependencies, check for the most recent stable releases. This project does not tolerate outdated packages — keeping dependencies current is essential for security, performance, and compatibility.
 
+Dependabot (`.github/dependabot.yml`) opens weekly update PRs for the `npm` and `github-actions` ecosystems, both rooted at `/`. Manual updates are still fine — just don't be surprised by overlapping Dependabot PRs.
+
 ```bash
 npm outdated              # Check for outdated packages
 npm update                # Update to latest within semver range
@@ -62,3 +64,4 @@ After updating packages, always run `npm test` to ensure everything still works.
 - **PRs:** `.github/workflows/test.yml` runs CSS lint → build → HTML validation → Lighthouse
 - **Deploy:** `.github/workflows/deploy.yml` on push to master runs all tests then deploys to Cloudflare Workers (config in `wrangler.jsonc`)
 - **Lighthouse thresholds:** 90+ required for performance, accessibility, best practices, and SEO
+- **Dependabot:** `.github/dependabot.yml` schedules weekly npm and GitHub Actions update PRs, which are gated by `test.yml`
