@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@lhci/cli": "^0.15.1",
-    "html-validate": "^11.6.2",
+    "html-validate": "^11.7.0",
     "stylelint": "^17.14.1",
     "stylelint-config-standard": "^40.0.0",
     "terser": "^5.49.2",
