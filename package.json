@@ -14,11 +14,11 @@
   },
   "devDependencies": {
     "@lhci/cli": "^0.15.1",
-    "html-validate": "^11.16.2",
+    "html-validate": "^11.16.4",
     "stylelint": "^17.16.0",
     "stylelint-config-standard": "^40.0.0",
     "terser": "^5.51.2",
     "vite": "^8.3.4",
-    "wrangler": "^4.149.0"
+    "wrangler": "^4.151.1"
   }
 }
