@@ -13,12 +13,12 @@
     "test:html": "html-validate dist/**/*.html"
   },
   "devDependencies": {
-    "@lhci/cli": "^0.15.1",
-    "html-validate": "^11.18.0",
+    "@lhci/cli": "^0.16.0",
+    "html-validate": "^11.21.0",
     "stylelint": "^17.16.0",
     "stylelint-config-standard": "^40.0.0",
     "terser": "^5.51.2",
-    "vite": "^8.3.5",
-    "wrangler": "^4.156.1"
+    "vite": "^8.3.6",
+    "wrangler": "^4.158.0"
   }
 }
